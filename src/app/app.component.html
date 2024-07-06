@@ -1,0 +1,71 @@
+
+<div>
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+<link rel="icon" type="image/x-icon" href="/OlineShopping/OlineMarket/src/favicon.ico" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light  fixedHeader" >
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" >Shop_Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link" aria-current="page" routerLink="/Home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/Electronicss Department">Electronicss </a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/Clothes Department">Clothes </a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/Jewerly Department">Furniture</a></li>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-dark" type="submit" routerLink="/cart">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <!-- <span class="badge bg-dark text-white ms-1 rounded-pill" ></span> -->
+                </button>
+                <button style="margin-left: 15px;" class="btn btn-outline-dark" type="submit" routerLink="/favorite">
+                    <img style="width:20px ;" src="https://cdn-icons-png.flaticon.com/512/8152/8152874.png" alt="">
+                    Favorites
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="Container">
+      <div class="row">
+          <div class="footer-col">
+              <h4>About our Website <div class="underline"><span></span></div></h4>
+              <ul class="list">
+                  <li><a href="/Home">Home Page</a></li>
+                  <li><a>Our Team</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Departments <div class="underline"><span></span></div></h4>
+              <ul class="list">
+                  <li><a routerLink="/Electronicss Department">Electronics Department</a></li>
+                  <li><a routerLink="/Clothes Department">Clothes Department</a></li>
+                  <li><a routerLink="/Jewerly Department">
+                    Furniture Department</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Contact uS <div class="underline"><span></span></div></h4>
+              <form>
+                  
+                  <input type="email" placeholder="Enter your email" required>
+                  
+              </form>
+          </div>
+      </div>
+      <p class="m-0 text-center text-white">Copyright &copy; Our Website 2022</p>
+  </div> 
+</footer>
+
+</div>
+

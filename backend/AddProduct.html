@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MobileShop</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <body>
+    <form id="prdFrm" action="http://localhost:3500/insert" method="POST">
+      Product ID: <input type="number" name="ProductID" ><br>
+      Product Name: <input type="text" name="Name" ><br>
+      Product Price:<input type="number" name="Price"><br>
+      Product Quantity: <input type="number" name="Quantity" ><br>
+      Product imgUrl: <input type="text" name="img" ><br>
+
+      <input id="mykey" type="submit" value="Add">
+    </form>
+</body>
+<script>
+let mykey = document.getElementById("mykey"); 
+mykey.addEventListener('click',function(){
+  window.location.reload(); 
+})
+</script>
+</html>

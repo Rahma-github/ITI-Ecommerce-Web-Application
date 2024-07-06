@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css"; 
+
+.product{
+  transition: all 0.3s ease;
+  overflow: hidden;
+
+}
+.product:hover{
+  transform: translate(0,-15px);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+  padding: 0;
+  border-radius: 10px;
+}

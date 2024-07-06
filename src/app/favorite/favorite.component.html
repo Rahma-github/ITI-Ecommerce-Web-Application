@@ -1,0 +1,30 @@
+<div class="cartBox">
+  <h1 class="text-danger">Favorite products ..</h1>
+  <div class="headCart">
+      <p class="lead">you have <label class="text-danger" >{{favoriteProducts.length}}</label> in your favorites</p>
+      <button class="btn btn-danger" (click)="ClearFavorite()"> Clear shopping favorites</button>
+  </div>
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Details</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr  *ngFor="let product of favoriteProducts;  let index = index" >
+              <td><img class="img" [src]="product.img"alt=""></td>
+              <td>{{product.Name}} </td>
+              <td>{{ product.Price | currency }}</td>
+              <td style="width: 45%;">{{product.Description}}</td>
+              <td>
+                  <button class="btn btn-danger" (click)="deleteProduct(index)"> Delete</button>
+
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>

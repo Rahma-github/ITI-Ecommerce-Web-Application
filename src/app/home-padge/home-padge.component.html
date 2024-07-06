@@ -1,0 +1,45 @@
+
+<!-- Header-->
+<!-- <header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Welcome to our online Website</h1>
+        </div>
+    </div>
+</header> -->
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div style="padding:30px 0 40px 0 ;">
+            <h2>Search</h2>
+            <input  type="text" [(ngModel)]="searchFilter" placeholder="Search By Product Name">
+        </div>
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5 " *ngFor="let product of filterBySearch">
+                <div class="card h-100 product">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <!-- Product image-->
+                    <a [routerLink]=" ['/geSingleProduct',product._id ]" ><img style="max-height: 360px;" class="card-img-top" [src]="product.img"/></a> 
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{ product.Name | lowercase }}</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through">{{ product.Price | currency }}</span>
+                            <h3>{{ product.Price - product.Price *0.3 | currency }}</h3>                         
+                        </div>
+                    </div>
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <span><a class="btn btn-outline-dark mt-auto"(click)="addToCart(product)">Add to cart</a></span>
+                        <span class="favorite" (click)="addToFavorite(product)" ><img style="width:30px ;" src="../../assets/favorite.png" alt=""></span>
+                    </div>
+                    <!-- Product actions-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,50 @@
+<div class="cartBox">
+  <h1 class="text-danger">Shopping cart</h1>
+  <div class="headCart">
+      <p class="lead">You have <label class="text-danger" >{{cartProducts.length}}</label> in your cart</p>
+      <button class="btn btn-danger" (click)="ClearCart()"> Clear shopping cart</button>
+  </div>
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Price</th>
+              <th style="width: 7%; padding-left: 70px;"> Quantity</th>
+              <th>Total</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let product of cartProducts;  let index = index" >
+              <td><img class="img" [src]="product.img"alt=""></td>
+              <td>{{product.Name}} </td>
+              <td>{{ product.Price | currency }}</td>
+              <td>
+                  <div class="quantity">
+                      <button class="btn btn-dark" (click)="addAmount(index)">+</button>
+                      <input class="form-control" type="number" min="1" [(ngModel)] = "product.Quantity">
+                      <button class="btn btn-dark" (click)="minsAmount(index)">-</button>
+                  </div>
+              </td>
+              <td class="salary">{{ product.Price * product.Quantity | currency }}</td>
+              <td>
+                  <button class="btn btn-danger" (click)="deleteProduct(index)"> Delete</button>
+
+              </td>
+          </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+              <th class="s s1"></th>
+              <th class="s s3"></th>
+              <th class="s s4"></th>
+              <th class="s s5"></th>
+              <th class="s s6">Total : {{total | currency }}</th>
+              <th>
+                  <button class="btn btn-success"> Order Now</button>
+              </th>
+          </tr>
+      </tfoot>
+  </table>
+</div>
